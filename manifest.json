@@ -1,0 +1,21 @@
+{
+    "name": "Theme Convertor",
+    "description": "Convert the theme of the website from dark to light and then light to dark mode.",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "popup.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Theme Convertor",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}

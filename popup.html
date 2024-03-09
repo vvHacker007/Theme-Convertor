@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        min-width: 300px;
+        text-align: center;
+    }
+    h1{
+        font-family: "Sansita Swashed", system-ui;
+    }
+    .black{
+        color: black;
+    }
+    .white{
+        color: white;
+    }
+    .yellow{
+        color: yellow;
+    }
+    .blue{
+        color: blue;
+    }
+    p, .button{
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.75rem;
+    }
+    .button{
+        background-color: gray;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 1rem;
+        /* animation: backgroundDark 1s infinite; */
+        cursor: pointer;
+    }
+    .row{
+        padding: 0.25rem;
+        pointer-events: none;
+    }
+    .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: white;
+        /* animation: moveCircleRight 1s infinite; */
+        pointer-events: none;
+    }
+
+    @keyframes moveCircleRight{
+        from{
+            left: 0;
+            background-color: white;
+        }
+        to{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: black;
+        }
+    }
+
+    @keyframes moveCircleLeft{
+        from{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: black;
+        }
+        to{
+            left: 0;
+            background-color: white;
+        }
+    }
+
+    @keyframes backgroundDark{
+        from{
+            background-color: gray;
+            color: black;
+        }
+        to{
+            background-color: rgb(49, 49, 49);
+            color: white;
+        }
+    }
+
+    @keyframes backgroundLight{
+        from{
+            background-color: rgb(49, 49, 49);
+            color: white;
+        }
+        to{
+            background-color: gray;
+            color: black;
+        }
+    }
+</style>
+<body class="popup">
+    <h1><span class="yellow">Theme</span><span class="blue"> Convertor</span></h1>
+    <p>This extension would make your websites interesting when you would be able to change the theme from lght to dark and vice-versa!!</p>
+    <div class="button">
+        <div class="row">On</div>
+        <div class="row">Off</div>
+        <div class="circle"></div>
+    </div>
+</body>
+<script src="./popup.js"></script>
+</html>
